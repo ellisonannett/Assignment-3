@@ -29,15 +29,24 @@ window.onload = function () {
         hiddenImages[6] = true; // Mark the image as hidden
     });
 
-    // Resize images based on viewport
+    // Resize images based on viewport and adjust vertical position
     function resizeImages() {
         const canvasWidth = window.innerWidth;
         const canvasHeight = window.innerHeight;
 
-        images.forEach(image => {
+        images.forEach((image, index) => {
             // Set image size as 10% of canvas width, maintaining aspect ratio
             image.style.width = `${canvasWidth * 0.1}px`; // 10% of canvas width
             image.style.height = 'auto'; // Maintain aspect ratio
+
+            // Position each image line vertically
+            if (index < 5) {
+                // First line of ducks (Line 1)
+                image.style.top = `${canvasHeight * 0.32}px`; // 25% of the canvas height
+            } else {
+                // Second line of ducks (Line 2)
+                image.style.top = `${canvasHeight * 0.65}px`; // 60% of the canvas height
+            }
         });
     }
 

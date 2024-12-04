@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background: url('/images/circus.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+body {
+    margin: 0;
+    
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Increased height for two lines of ducks */
+    overflow: visible; /* Hide any image part that's outside of the container */
+}
+
+#sliding-image-1, #sliding-image-2, #sliding-image-3, #sliding-image-4, #sliding-image-5,
+#sliding-image-6, #sliding-image-7, #sliding-image-8, #sliding-image-9, #sliding-image-10 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the ducks */
+    width: 200px; /* Set width of ducks */
+    z-index: 10; /* Ensure they are visible above the background */
+
+}
+
+#sliding-image-2 {
+    left: 100px; /* Position the second duck next to the first one */
+}
+
+#sliding-image-3 {
+    left: 200px; /* Position the third duck next to the second one */
+}
+
+#sliding-image-4 {
+    left: 300px; /* Position the fourth duck next to the third one */
+}
+
+#sliding-image-5 {
+    left: 400px; /* Position the fifth duck next to the fourth one */
+}
+
+/* Position the second line of ducks below the first line */
+#sliding-image-6 {
+    left: 0;
+    top: 120%; /* Position second line lower */
+}
+
+#sliding-image-7 {
+    left: 100px;
+    top: 120%;}
+
+#sliding-image-8 {
+    left: 200px;
+    top: 120%;}
+
+#sliding-image-9 {
+    left: 300px;
+    top: 120%;
+}
+
+#sliding-image-10 {
+    left: 400px;
+    top: 120%;
+}
